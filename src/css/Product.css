@@ -1,0 +1,42 @@
+.image {
+    height: 150px;
+    width: 200px;
+    margin-top: 30px;
+}
+
+.card {
+    height: 390px;
+    width: 240px;
+    box-shadow: 1px 4px 3px lightgrey;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.product-title {
+    text-align: center;
+    height: 80px;
+}
+
+.product-price {
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 1px 4px 3px rgb(71, 70, 70);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.card-button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(54, 86, 60);
+    color: #fff;
+}
+
+.card-button:hover {
+    cursor: pointer;
+    background-color: rgb(236, 140, 14);
+    transition: all 0.3s linear;
+}

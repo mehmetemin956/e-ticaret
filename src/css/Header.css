@@ -1,0 +1,139 @@
+/* === Genel Header Stil === */
+.header-container {
+    width: 100%;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.65);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+/* === Dark Mode === */
+body:not(.light-mode) .header-container {
+    background: rgba(30, 30, 30, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* === Logo === */
+.logo {
+    height: 70px;
+    width: 80px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #102a47;
+}
+
+/* === Arama Kutusu === */
+.search-input {
+    width: 220px;
+    padding: 8px 12px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #111;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode input */
+body:not(.light-mode) .search-input {
+    background-color: rgba(50, 50, 50, 0.9);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Focus olduğunda */
+.search-input:focus {
+    border-color: #0078ff;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Dark mode focus */
+body:not(.light-mode) .search-input:focus {
+    background-color: rgba(60, 60, 60, 1);
+}
+
+/* === Iconlar === */
+.icon {
+    font-size: 22px;
+    margin-right: 10px;
+    margin-left: 3px;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.icon:hover {
+    color: #0078ff;
+    transform: scale(1.15);
+}
+
+/* === Sepet (BasketDrawer) === */
+.header-container .basket-button {
+    background-color: transparent;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+body:not(.light-mode) .basket-button {
+    color: #fff !important;
+}
+
+/* === Responsive === */
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}
+
+/* === Global Tema Renkleri === */
+body {
+    background-color: #0e0e0e;
+    /* dark mode varsayılan */
+    color: #fff;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Light mod açıkken */
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+/* root ve alt container’lar da uyumlu olsun */
+#root {
+    min-height: 100vh;
+    background-color: inherit;
+    color: inherit;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Uygulamanın genel kapsayıcıları için de (örnek olarak main-content) */
+.main-content,
+.app-container,
+.page-container {
+    background-color: inherit;
+    color: inherit;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}

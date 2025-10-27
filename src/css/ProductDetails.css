@@ -1,0 +1,117 @@
+.product-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9fafb;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-details-image {
+    flex: 1 1 350px;
+    max-width: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-details-image:hover {
+    transform: scale(1.03);
+}
+
+.product-detaisl-info {
+    flex: 1 1 400px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-details-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.product-details-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.product-details-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #10b981;
+    margin-bottom: 1.5rem;
+}
+
+.count-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.count-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #e5e7eb;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.count-btn:hover {
+    background-color: #d1d5db;
+}
+
+.count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.buy-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .product-details-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .product-details-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .product-details-info {
+        width: 100%;
+    }
+}
